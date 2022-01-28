@@ -5,7 +5,7 @@ const api = require('./routes/index.js');
 const diagnostics = require("./routes/diagnostics");
 
 
-const PORT = process.env.port || 3001;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -24,7 +24,6 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
-app.get('/')
 // GET Route for feedback page
 app.get('/feedback', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/pages/feedback.html'))
